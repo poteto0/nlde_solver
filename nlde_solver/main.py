@@ -7,7 +7,7 @@ class NLDESolver:
   def solve(self, y1_range, y2_range, axis="x"):
     return self._solve(y1_range, y2_range, axis)
   
-  def _solve_x(self, y1_range, y2_range, axis):
+  def _solve(self, y1_range, y2_range, axis):
     Y1, Y2 = np.meshgrid(y1_range, y2_range)
     u, v = np.zeros(Y1.shape), np.zeros(Y2.shape)
     NI, NJ = Y1.shape
